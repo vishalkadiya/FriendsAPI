@@ -1,0 +1,49 @@
+<form id="a" [formGroup]="userForm" (ngSubmit)="onSubmit(firstname,lastname,address,image,mobilenum,email)">
+    <table>
+        <tr>
+            <td><label><b>Firstname: </b></label></td>
+            <td><input type="text" name="firstname" [(ngModel)]="firstname" formControlName="firstname"></td>
+            <div *ngIf="(userForm.controls['firstname'].dirty || userForm.controls['firstname'].touched) && userForm.hasError('required','firstname')" class="text-danger">
+                Please enter firstname
+            </div>
+        </tr>
+        <tr>
+            <td><label><b>Lastname: </b></label></td>
+            <td><input type="text" name="lastname" [(ngModel)]="lastname" formControlName="lastname"></td>
+            <div *ngIf="(userForm.controls['lastname'].dirty || userForm.controls['lastname'].touched) && userForm.hasError('required','lastname')" class="text-danger">
+                Please enter lastname
+            </div>
+        </tr>
+        <tr>
+            <td> <label><b>Address: </b></label></td>
+            <td><input type="text" name="address" [(ngModel)]="address" formControlName="address"></td>
+            <div *ngIf="(userForm.controls['address'].dirty || userForm.controls['address'].touched) && userForm.hasError('required','address')" class="text-danger">
+                Please enter address
+            </div> 
+        </tr>
+        <tr>
+            <td><label><b>Image name: </b></label></td>
+            <td><input type="text" name="image" [(ngModel)]="image" formControlName="image"></td>
+            <div *ngIf="(userForm.controls['image'].dirty || userForm.controls['image'].touched) && userForm.hasError('required','image')" class="text-danger">
+                Please enter image
+            </div> 
+        </tr>
+        <tr>
+            <td><label><b>Mobilenum: </b></label></td>
+            <td><input type="number" name="mobilenum" [(ngModel)]="mobilenum" formControlName="mobilenum"></td>
+            <div *ngIf="(userForm.controls['mobilenum'].dirty || userForm.controls['mobilenum'].touched) && userForm.hasError('required','mobilenum')" class="text-danger">
+                Please enter mobilenum
+            </div>
+        </tr>
+        <tr>
+            <td><label><b>Email: </b></label></td>
+            <td><input type="email" name="email" [(ngModel)]="email" formControlName="email"></td>
+                          <div *ngIf="(userForm.controls['email'].dirty || userForm.controls['email'].touched) && userForm.hasError('required','email')" class="text-danger">
+                Please enter email
+            </div>
+        </tr>
+        <tr>
+            <td><input class="btn btn-primary" type="submit" [disabled]="userForm.invalid" value="submit"></td>
+        </tr>
+    </table>
+</form>

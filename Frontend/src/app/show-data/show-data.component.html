@@ -1,0 +1,41 @@
+<div id="a1">  
+    <div>   
+        <form [formGroup]="form" >  
+            <table>  
+                <tr>  
+                    <td> <input type="text"  placeholder="Enter name" class="form-control"#searchInfo> </td> 
+                    <td><button class="btn btn-primary hidden-xs" (click)="searchForm(searchInfo.value)">Search</button></td>  
+                </tr>  
+            </table>  
+        </form>  
+    </div>  
+</div>  
+
+<br>
+<div id="a">  
+    <div class="table">  
+        <table class="thead-dark">  
+            <tr>  
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Address</th>
+                <th>Image</th>
+                <th>Mobile number</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>  
+            <ng-container *ngFor="let u of data">   
+                <tr>  
+                    <td>{{u.firstname}}</td>
+                    <td>{{u.lastname}}</td>
+                    <td>{{u.address}}</td>
+                    <td>{{u.image}}</td>
+                    <td>{{u.mobilenum}}</td>
+                    <td>{{u.email}}</td>
+                    <td><button class="btn btn-success btn-sm" id="a2" (click)='sendRequest()'>sendrequest</button></td>
+                </tr>  
+                
+            </ng-container>  
+        </table>  
+    </div>  
+</div>  
