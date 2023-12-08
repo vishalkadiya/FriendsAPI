@@ -1,2 +1,5 @@
-# FriendsAPI
-Here are several functions in the friends API, like adding friends, removing friends, viewing friends, searching for friends, showing a friend list, uploading, and updating profile pictures
+**Tools:** SpringToolSuite4, Visual Studio Code, MySQL Workbench 
+
+**Implementation:** Angular, Spring Boot, Spring JPA 
+
+**Description:** There are several functions in the friends API, like adding friends, removing friends, viewing friends, searching for friends, showing a friend list, uploading, and updating profile pictures.
